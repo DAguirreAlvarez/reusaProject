@@ -117,7 +117,7 @@ nav ul li a:not(:hover){
 
 .box{
     /* background-color: white; */
-    background-image: linear-gradient(to bottom right,#b7bbfcd2,white,#fcca9fe3); 
+    background-image: linear-gradient(to bottom right,#b7bafc,white,#fcca9fef); 
     width: 95%;
     min-height: 730px;
     border: solid 1px;
@@ -172,13 +172,8 @@ nav ul li a:not(:hover){
     background-image: linear-gradient(to bottom right,#fcca9fe3,white,#b7bbfcd2); 
     border-radius: 50%;
     padding: 10px;
+    border: 1px solid;
 }
-
-
-
-
-
-
 
 
 #contenido2{
@@ -195,16 +190,6 @@ nav ul li a:not(:hover){
     font-weight: bold;
     margin-top: 20px;
     padding-left: 20px;
-}
-
-
-#recycleClothes{
-    margin: 15px;
-    margin-left: 40px;
-    /* background-color: #ffcaaf75; */
-    background-image: linear-gradient(to bottom right,#fcca9fe3,white,#b7bbfcd2); 
-    border-radius: 50%;
-    padding: 10px;
 }
 
 
