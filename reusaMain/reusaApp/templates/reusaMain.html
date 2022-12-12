@@ -4,7 +4,22 @@
 {% block content %}
 <div id="introduccion">
     <h1 class="titleIndex"> Ropa Reutilizada</h1>
-    <img src="{% static 'img/recycleClothing.png' %}" alt="" id="recycleClothes">
+    <div id="contenido">
+        <img src="{% static 'img/recycleClothing.png' %}" alt="" id="recycleClothes">
+        <div>
+            <p>Ropa accesible</p>
+            <p>Apoya economía circular</p>
+            <p>Extiende vida del Textil</p>
+        </div>
+    </div>
+    <div id="contenido2">
+        <div>
+            <p>Reducir los residuos textiles</p>
+            <p>Ahorro de materias primas</p>
+            <p>Reduce tu huella de carbono</p>
+        </div>
+        <img src="{% static 'img/recycleClothing.png' %}" alt="" id="recycleClothes">
+    </div>
 </div>
 
 {% endblock%}
