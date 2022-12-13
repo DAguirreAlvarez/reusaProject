@@ -20,5 +20,7 @@ from reusaApp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('inicio', views.index, name='index'),
-    path('', views.index, name="Inicio")
+    path('', views.index, name="Inicio"),
+    path('contacto', views.contacto, name="Contacto"),
+    path('catalogo', views.catalogo, name="Catalogo")
 ]
