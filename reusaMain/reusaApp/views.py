@@ -11,3 +11,6 @@ def contacto(request):
 
 def catalogo(request):
     return render(request, 'clothing.html')
+
+def addProduct(request):
+    return render(request, 'addProduct.html')
