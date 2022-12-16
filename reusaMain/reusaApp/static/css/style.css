@@ -35,7 +35,7 @@ header{
     display: block;
     letter-spacing: 2px;
     font-weight: bold;
-    color: #9f9f9f;
+    color: #7e7e7e;
     float: left;
     margin-top: 40px;
     margin-left: 20px;
@@ -198,7 +198,30 @@ nav ul li a:not(:hover){
 
 /*#endregion */
 
+/*#region Formulario producto*/
 
+#formProduct label{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 3px;
+    font-size: large;
+    font-weight: bold;
+    background-color: red;
+    
+}
+#btnGuardar{
+    display: block;
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    padding: 4px;
+    margin-top: 10px;
+}
+
+
+
+
+/*#endregion */
 /*#region Footer*/
 
 

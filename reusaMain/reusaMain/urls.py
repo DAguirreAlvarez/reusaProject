@@ -23,5 +23,6 @@ urlpatterns = [
     path('', views.index, name="Inicio"),
     path('contacto', views.contacto, name="Contacto"),
     path('catalogo', views.catalogo, name="Catalogo"),
-    path('agregarp', views.addProduct, name="AgregarProducto")
+    path('agregarp', views.addProduct, name="AgregarProducto"),
+    path('guardar-producto', views.agregarProducto, name="btnGuardarProducto")
 ]
