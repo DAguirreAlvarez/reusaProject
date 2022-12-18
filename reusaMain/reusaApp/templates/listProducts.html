@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+{% block title %}Reusa Consciente | Productos{% endblock title %}
+{% block content %}
+<h1>Productos</h1>
+
+{% for producto in productos %}
+    <p>{{producto}}</p>
+{% endfor %}
+{% endblock content %}

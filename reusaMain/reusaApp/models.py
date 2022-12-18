@@ -10,6 +10,7 @@ class Product(models.Model):
     sex =  models.CharField(max_length=10)
     color = models.CharField(max_length=20)
     brand = models.CharField(max_length=30)
+    image = models.ImageField(default='null', upload_to="products")
     
     class Meta:
         # verbose_name es para cuando se muestra la lista desplegada de registros de esta tabla.

@@ -16,6 +16,14 @@ def catalogo(request):
 def addProduct(request):
     return render(request, 'addProduct.html')
 
+def listProduct(request):
+
+    products = Product.objects.all()
+
+    return render(request, 'listProducts.html',{
+        'productos' : products
+    })
+
 
 
 def agregarProducto(request):

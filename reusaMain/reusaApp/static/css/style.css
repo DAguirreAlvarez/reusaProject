@@ -203,23 +203,57 @@ nav ul li a:not(:hover){
 #formProduct label{
     display: block;
     margin-top: 20px;
-    margin-bottom: 3px;
+    margin-bottom: 4px;
     font-size: large;
     font-weight: bold;
-    background-color: red;
-    
 }
+
+#formProduct input{
+    padding: 4px;
+}
+
 #btnGuardar{
     display: block;
-    font-size: medium;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;
-    padding: 4px;
+    font-size: 17px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* font-weight: bold; */
     margin-top: 10px;
+    height: 30px;
+    width: 80px;
+    transition: 0.3s;
+    background-color: #d7d7d7d6;
+    border-radius: 7px;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 
+#formProduct select{
+    height: 35px;
+    font-size: 15px;
+    padding: 2px;
+}
+
+#formProduct{
+    margin-left: 5px;
+    background-color: #d7d7d663;
+    padding-left: 5px;
+}
+
+#btnGuardar:hover{
+    width: 100px;
+    transition: 0.3s;
+    border-radius: 5px;
+}
 
 /*#endregion */
 /*#region Footer*/

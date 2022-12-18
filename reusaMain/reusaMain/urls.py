@@ -23,6 +23,7 @@ urlpatterns = [
     path('', views.index, name="Inicio"),
     path('contacto', views.contacto, name="Contacto"),
     path('catalogo', views.catalogo, name="Catalogo"),
+    path('productos',views.listProduct, name="Productos"),
     path('agregarp', views.addProduct, name="AgregarProducto"),
     path('guardar-producto', views.agregarProducto, name="btnGuardarProducto")
 ]
