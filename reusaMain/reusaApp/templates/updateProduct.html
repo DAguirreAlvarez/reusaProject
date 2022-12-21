@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+{% block title %}Reusa Consciente | Actualizar{% endblock title %}
+{% block content %}
+<h1>Actualizar Producto</h1>
+<form action="{% url 'Actualizar' id=producto.id %}" method='POST' id="formProduct">
+    {% csrf_token %}
+
+    <label>ID: {{producto.id}}</label>
+
+    <label for="category">Categoría</label>
+    <input type="text" name="category" value="{{producto.category}}">
+
+    <label for="size">Talla</label>
+    <input type="text" name="size" value="{{producto.size}}">
+
+    <label for="price">Precio</label>
+    <input type="number" name="price" value="{{producto.price}}">
+
+    <label for="sex">Genero</label>
+    <select name="sex" id="sex">
+        <option value="Hombre">Hombre</option>
+        <option value="Mujer">Mujer</option>
+        <option value="Unisex">Unisex</option>
+    </select>
+
+    <label for="color">Color</label>
+    <input type="text" name="color" value="{{producto.color}}">
+
+    <label for="brand">Marca</label>
+    <input type="text" name="brand" value="{{producto.brand}}">
+
+    <input type="submit" value="Actualizar" id="btnGuardar">
+</form>
+{% endblock content %}

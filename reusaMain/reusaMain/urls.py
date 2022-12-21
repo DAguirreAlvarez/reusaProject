@@ -25,5 +25,9 @@ urlpatterns = [
     path('catalogo', views.catalogo, name="Catalogo"),
     path('productos',views.listProduct, name="Productos"),
     path('agregarp', views.addProduct, name="AgregarProducto"),
-    path('guardar-producto', views.agregarProducto, name="btnGuardarProducto")
+    path('guardar-producto', views.agregarProducto, name="btnGuardarProducto"),
+    path('productos/<str:order>', views.orderBy, name="Ordernar"),
+    path('borrarProduct/<int:id>', views.deteleProduct, name="Eliminar"),
+    path('seleccionarProduct/<int:id>', views.selectProduct, name="Seleccionar"),
+    path('actualizarProduct/<int:id>', views.updateProduct, name="Actualizar"),
 ]

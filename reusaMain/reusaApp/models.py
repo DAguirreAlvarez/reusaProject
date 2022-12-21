@@ -22,4 +22,4 @@ class Product(models.Model):
         ordering = ['-id']
 
     def __str__(self):
-        return f"{self.pk} - {self.category} - {self.color} - {self.brand}"
+        return f"{self.pk} - {self.category} - {self.color} - {self.brand} - {self.price}"

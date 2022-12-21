@@ -18,12 +18,18 @@ def addProduct(request):
 
 def listProduct(request):
 
-    products = Product.objects.all()
+    products = Product.objects.order_by("id")
 
     return render(request, 'listProducts.html',{
         'productos' : products
     })
 
+def orderBy(request,order):
+    products = Product.objects.order_by(order)
+
+    return render(request,'listProducts.html',{
+        'productos' : products
+    })
 
 
 def agregarProducto(request):
@@ -35,6 +41,7 @@ def agregarProducto(request):
         sex = request.POST['sex']
         color = request.POST['color']
         brand = request.POST['brand']
+        image = request.FILES['image']
 
         product = Product(
             category = category,
@@ -42,10 +49,49 @@ def agregarProducto(request):
             price = price,
             sex = sex,
             color = color,
-            brand = brand
+            brand = brand,
+            image = image
         )
 
         product.save()
         return HttpResponse("<p>Producto creado:</p>")
     else:
         return HttpResponse("<p>No ha podido almacenar el producto.</p>")
+
+def selectProduct(request,id):
+
+    product = Product.objects.get(pk=id)
+    return render(request, 'updateProduct.html',{
+        'producto' : product
+    })
+
+def updateProduct(request, id):
+    if request.method == 'POST':
+        id = id
+        category = request.POST['category']
+        size = request.POST['size']
+        price = request.POST['price']
+        sex = request.POST['sex']
+        color = request.POST['color']
+        brand = request.POST['brand']
+
+        product = Product(
+            pk = id,
+            category = category,
+            size = size,
+            price = price,
+            sex = sex,
+            color = color,
+            brand = brand,
+        )
+        product.save()
+    return redirect("Productos")
+
+
+
+def deteleProduct(request,id):
+    product = Product.objects.get(pk=id)
+    product.delete()
+    
+    return redirect("Productos")
+

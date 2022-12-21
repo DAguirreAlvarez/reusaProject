@@ -1,9 +1,25 @@
 {% extends 'layout.html' %}
 {% block title %}Reusa Consciente | Productos{% endblock title %}
 {% block content %}
+{% load static %}
 <h1>Productos</h1>
-
+<ul id="orderButtons">
+    <h4>Ordernar:</h4>
+    <li><a href="{% url 'Ordernar' order='id' %}" ><button>ID</button></a></li>
+    <li><a href="{% url 'Ordernar' order='category' %}" ><button>Categoría</button></a></li>
+    <li><a href="{% url 'Ordernar' order='size' %}" ><button>Talla</button></a>
+    </li>
+    <li><a href="{% url 'Ordernar' order='price' %}" ><button>Precio</button></a>
+    </li>
+    <li><a href="{% url 'Ordernar' order='sex' %}" ><button>Genero</button></a>
+    </li>
+    <li><a href="{% url 'Ordernar' order='color' %}" ><button>Color</button></a>
+    </li>
+    <li><a href="{% url 'Ordernar' order='brand' %}" ><button>Marca</button></a>
+    </li>
+</ul>
 {% for producto in productos %}
-    <p>{{producto}}</p>
+    <p>{{producto}} <a href="{% url 'Eliminar' id=producto.id %}">Eliminar </a><a href="{% url 'Seleccionar' id=producto.id %}">Actualizar</a></p>
 {% endfor %}
+
 {% endblock content %}

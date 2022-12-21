@@ -4,7 +4,7 @@
 {% block content %}
 <h1>Agregar Producto </h1>
 
-<form action="{% url 'btnGuardarProducto' %}" method='POST' id="formProduct">
+<form action="{% url 'btnGuardarProducto' %}" method='POST' id="formProduct" enctype="multipart/form-data">
     {% csrf_token %}
     <label for="category">Categoría</label>
     <input type="text" name="category" placeholder="Ej: Polera-Falda-etc">
@@ -27,6 +27,9 @@
 
     <label for="brand">Marca</label>
     <input type="text" name="brand" placeholder="Ej: DC-Adidas-Etc">
+
+    <label for="image"></label>
+    <input type="file" name="image" accept="image/png, image/jpeg" >
 
     <input type="submit" value="Guardar" id="btnGuardar">
 </form>
