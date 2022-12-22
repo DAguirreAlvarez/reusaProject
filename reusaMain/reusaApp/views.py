@@ -87,8 +87,6 @@ def updateProduct(request, id):
         product.save()
     return redirect("Productos")
 
-
-
 def deteleProduct(request,id):
     product = Product.objects.get(pk=id)
     product.delete()
