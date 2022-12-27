@@ -1,8 +1,9 @@
 {% extends 'layout.html' %}
 {% block title %}Reusa Consciente | Actualizar{% endblock title %}
 {% block content %}
+{% load static %}
 <h1>Actualizar Producto</h1>
-<form action="{% url 'Actualizar' id=producto.id %}" method='POST' id="formProduct">
+<form action="{% url 'Actualizar' id=producto.id %}" method='POST' id="formProduct" enctype="multipart/form-data">
     {% csrf_token %}
 
     <label>ID: {{producto.id}}</label>
@@ -28,6 +29,11 @@
 
     <label for="brand">Marca</label>
     <input type="text" name="brand" value="{{producto.brand}}">
+
+    <label for="imagen">Imagen</label>
+    <input type="file" name="imagen" accept="image/png, image/jpeg">
+    
+    <p>{{producto.image}}</p>
 
     <input type="submit" value="Actualizar" id="btnGuardar">
 </form>

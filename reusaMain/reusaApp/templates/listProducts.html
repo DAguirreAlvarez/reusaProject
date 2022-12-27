@@ -19,10 +19,8 @@
     </li>
 </ul>
 {% for producto in productos %}
-    <p>{{producto}} <a href="{% url 'Eliminar' id=producto.id %}">Eliminar </a><a href="{% url 'Seleccionar' id=producto.id %}">Actualizar</a></p>
-    {% if producto.image != 'null' and producto.image.url|length >= 1  %}
-        <img src="{{producto.image.url}}"/>
-    {% endif %}
+    <p>{{producto}} <a href="{% url 'Eliminar' id=producto.id %}">Eliminar </a><a href="{% url 'selectForm' id=producto.id %}">Actualizar</a></p>
+    
 {% endfor %}
 
 {% endblock content %}

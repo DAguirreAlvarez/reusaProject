@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block title %}Reusa Consciente | Create Form {% endblock title %}
+{% block content %}
+<h1>Django Form | Guardar</h1>
+{% if form.errors %}
+    <strong>
+        Existen errores en el formulario.
+    </strong>
+{% endif %}
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Guardar">
+</form>
+
+{% endblock content %}
+
