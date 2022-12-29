@@ -313,6 +313,31 @@ li a button{
     padding: 5px;
 }
 
+#Form {
+    min-height: 500px;
+    font-weight: bold;
+}
+
+#Form label,
+#Form input{
+    padding-bottom: 3px;
+    margin: 3px;
+}
+
+#Form input[type="submit"]{
+    padding: 6px;
+}
+
+#Form p{
+    background-color: red;
+}
+
+#Form p label{
+    background-color: blue;
+    
+}
+
+
 /*#region Footer*/
 
 

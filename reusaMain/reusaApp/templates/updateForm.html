@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 {% block title %}Reusa Consciente | Update Form{% endblock title %}
 {% block content %}
-<form action="" method="POST" enctype="multipart/form-data">
+<form action="" method="POST" enctype="multipart/form-data" id="Form">
     {% csrf_token %}
     {{form.as_p}}
     <input type="submit" value="Actualizar">

@@ -29,8 +29,6 @@ urlpatterns = [
     path('guardar-producto', views.agregarProducto, name="btnGuardarProducto"),
     path('productos/<str:order>', views.orderBy, name="Ordernar"),
     path('borrarProduct/<int:id>', views.deteleProduct, name="Eliminar"),
-    path('seleccionarProduct/<int:id>', views.selectProduct, name="Seleccionar"),
-    path('actualizarProduct/<int:id>', views.updateProduct, name="Actualizar"),
     
     path('guardar', views.saveProductForm, name="Guardar"),
     path('selectProduct/<int:id>', views.updateProductForm, name="selectForm"),
