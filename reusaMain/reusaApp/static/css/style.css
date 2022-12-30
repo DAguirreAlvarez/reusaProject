@@ -257,6 +257,8 @@ input::-webkit-inner-spin-button {
 
 /*#endregion */
 
+/*#region Random*/
+
 #orderButtons{
     display: flex;
     margin-top: 10px;
@@ -270,27 +272,6 @@ li a button{
     margin-right: 6px;
     margin-bottom: 10px;
 }
-
-#imgLista{
-    width: 200px;
-    height: 240px;
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
-    transition: 0.5s;
-    border-radius: 50%;
-}
-
-#imgLista:hover{
-    transition: 0.5s;
-    width: 280px;
-    height: 280px;
-    filter: blur(0px);
-    -webkit-filter: blur(0px);
-    border-radius: 10%;
-    /* width: 280px; */
-    /* height: 336px; */
-}
-
 
 
 #card{
@@ -312,31 +293,38 @@ li a button{
     background-color: #7e7e7ea8;
     padding: 5px;
 }
+/*#endregion */
 
+/*#region Form Django*/
 #Form {
     min-height: 500px;
     font-weight: bold;
+    padding-top: 20px;
+    padding-left: 10px;
+    font-size: 20px;
 }
 
 #Form label,
 #Form input{
-    padding-bottom: 3px;
+    padding: 3px;
     margin: 3px;
+}
+
+#Form select{
+    padding: 4px;
+    margin-left: 5px;
 }
 
 #Form input[type="submit"]{
     padding: 6px;
-}
-
-#Form p{
-    background-color: red;
+    margin-top: 10px;
 }
 
 #Form p label{
-    background-color: blue;
-    
+    display: block;
 }
 
+/*#endregion */
 
 /*#region Footer*/
 

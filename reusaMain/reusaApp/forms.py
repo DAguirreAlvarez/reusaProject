@@ -20,6 +20,7 @@ class FormProduct(forms.ModelForm):
             'sex': "Genero",
             'color': "Color",
             'brand': "Marca",
+            'image': 'Imagen'
         }
         widgets = {
             'category': forms.TextInput(
@@ -27,13 +28,12 @@ class FormProduct(forms.ModelForm):
                     'placeholder': 'Polera, Zapatillas, Etc',
                     'class': 'campo-categoria-form'}
                 ),
-
             'size': forms.TextInput(attrs={'placeholder': 'S, M, L, XL, Etc'}),
             'price': forms.TextInput(attrs={'placeholder': 'Ej: 9990'}),
-            
             'color': forms.TextInput(attrs={'placeholder': 'Blanco, Negro, Etc'}),
             'brand': forms.TextInput(attrs={'placeholder': 'Puma, DC, Vans, Etc'})
         }
+
 
 
 
