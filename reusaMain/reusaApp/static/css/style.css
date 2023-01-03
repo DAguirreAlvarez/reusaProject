@@ -273,25 +273,39 @@ li a button{
     margin-bottom: 10px;
 }
 
+#cards{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 1.5rem;
+    padding-top: 20px;
+    width: 100%;
+}
 
 #card{
     height: 250px;
     width: 200px;
-    display: block;
-    background-color: #7e7e7e;
-    margin-bottom: 20px;
+    right: 5px;
+    padding-top: 10px;
+    border-radius: 5px;
 }
 
 #imgCard{
     height: 250px;
     width: 200px;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
 #textCard{
+    background-color: #5a5a5aa8;
+    width: 190px;
     position: relative;
-    bottom: 85px;
-    background-color: #7e7e7ea8;
-    padding: 5px;
+    bottom: 100px;
+    color: white;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    border-radius: 0px 0px 5px 5px;
 }
 /*#endregion */
 

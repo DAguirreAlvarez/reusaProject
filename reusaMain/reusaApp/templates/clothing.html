@@ -3,18 +3,20 @@
 {% block content %}
 {% load static %}
 <h1>Catálogo</h1>
-{% for product in productos %}
-<div id="card">
-    {% if product.image != 'null' and product.image.url|length >= 1  %}
-        <img src="{{product.image.url}}" id="imgCard"/>
-    {% endif %}
-
-    <div id="textCard">
-        <h4>{{product.category}}</h4>
-        <p>{{product.brand}}</p>
-        <p>{{product.sex}}</p>
-        <h4>${{product.price}}</h4>
+<div id="cards">
+    {% for product in productos %}
+    <div id="card">
+        {% if product.image != 'null' and product.image.url|length >= 1  %}
+            <img src="{{product.image.url}}" id="imgCard"/>
+        {% endif %}
+        <div id="textCard">
+            <h4>{{product.category}}</h4>
+            <p>{{product.brand}}</p>
+            <p>{{product.sex}}</p>
+            <p>{{product.size}}</p>
+            <h4>$ {{product.price}}</h4>
+        </div>
     </div>
+    {% endfor %}
 </div>
-{% endfor %}
 {% endblock content %}
