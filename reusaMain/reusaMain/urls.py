@@ -32,6 +32,8 @@ urlpatterns = [
     
     path('guardar', views.saveProductForm, name="Guardar"),
     path('selectProduct/<int:id>', views.updateProductForm, name="selectForm"),
+
+    path('registro/', views.register, name="signin")
 ]
 
 # Configuracion para cargar imagenes

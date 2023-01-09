@@ -340,6 +340,28 @@ li a button{
 
 /*#endregion */
 
+/*#region Form Registro Django*/
+
+#FormRegister{
+    margin: 20px 0px 0px 20px;
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#FormRegister input{
+    display: block;
+    margin: 3px 0px 10px 0px;
+    padding: 5px;
+}
+
+#FormRegister input[type="submit"]{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+}
+
+
+/*#endregion */
+
 /*#region Footer*/
 
 

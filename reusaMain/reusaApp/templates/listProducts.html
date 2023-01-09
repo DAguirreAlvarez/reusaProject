@@ -22,13 +22,14 @@
     <p>{{producto}} <a href="{% url 'Eliminar' id=producto.id %}">Eliminar </a><a href="{% url 'selectForm' id=producto.id %}">Actualizar</a></p>
 {% endfor %} {% endcomment %}
 
-<table style= "border: 1px solid black; width:550px">
+<table style= "border: 1px solid black; width:650px">
     <tr>
         <th style= "border: 1px solid black; background-color: black; color: white;">ID</th>
         <th style= "border: 1px solid black; background-color: black; color: white;">Category</th>
         <th style= "border: 1px solid black; background-color: black; color: white;">Brand</th>
         <th style= "border: 1px solid black; background-color: black; color: white;">Size</th>
         <th style= "border: 1px solid black; background-color: black; color: white;">Color</th>
+        <th style= "border: 1px solid black; background-color: black; color: white;">Genero</th>
         <th style= "border: 1px solid black; background-color: black; color: white;">Price</th>
         <th style= "border: 1px solid black; background-color: black; color: white;">Eliminar</th>
         <th style= "border: 1px solid black; background-color: black; color: white;">Actualizar</th>
@@ -40,6 +41,7 @@
         <td>{{producto.brand}}</td>
         <td>{{producto.size}}</td>
         <td>{{producto.color}}</td>
+        <td>{{producto.sex}}</td>
         <td style="direction:rtl">${{producto.price}}</td>
         <td style="font-weight: bold; text-align:center;">
             <a href="{% url "Eliminar" id=producto.id %}" style="color:red; ">X</a>

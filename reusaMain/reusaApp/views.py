@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect, HttpResponse
 from reusaApp.models import Product
-from reusaApp.forms import FormProduct
+from reusaApp.forms import FormProduct, RegisterForm
 from django.contrib import messages
+from django.contrib.auth.forms import UserCreationForm
 
 # Create your views here.
 
@@ -126,4 +127,18 @@ def updateProductForm(request, id):
         form = FormProduct(instance=producto)
     return render(request, "updateForm.html",{
         "form":form
+    })
+
+
+def register(request):
+    register_form = RegisterForm()
+
+    if request.method=="POST":
+        register_form = RegisterForm(request.POST)
+        if register_form.is_valid():
+            register_form.save()
+            return redirect("index")
+    
+    return render(request, "register.html",{
+        "register_form": register_form
     })
