@@ -140,5 +140,7 @@ def register(request):
             return redirect("index")
     
     return render(request, "register.html",{
-        "register_form": register_form
+        "register_form": register_form,
+        "title": "Registro"
+        
     })
