@@ -25,7 +25,7 @@ header{
     margin: 0 auto;
     width: 50%;
     height: 140px;
-    padding-top: 10px;
+    padding-top: 7px;
 }
 
 #logotipo h1{
@@ -357,6 +357,12 @@ li a button{
     font-size: medium;
 }
 
+#FormRegister input:hover[type="submit"]{
+    transition: 100ms;
+    background-color: #a8a8a8;
+    border-radius: 8%;
+}
+
 
 /*#endregion */
 
@@ -376,6 +382,7 @@ footer{
     text-align: center;
     box-shadow: 0px 0px 20px gray;
     border-radius: 5px;
+    margin-bottom: 3px;
 }
 /*#endregion Footer*/
 
